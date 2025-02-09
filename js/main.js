@@ -27,6 +27,15 @@ function getCards(){
         console.log(data.cards[1].image)
         document.querySelector("#Player1").src = data.cards[0].image
         document.querySelector("#Player2").src = data.cards[1].image
+        let player1Val = data.cards[0].value
+        let player2Val = data.cards[1].value
+        if(player1Val>player2Val){
+          document.querySelector("h3").innerText = "🏆 The Winner Is Player 1"
+
+        }
+        else{
+          document.querySelector("h3").innerText = "🏆 The Winner Is Player 2"
+        }
       
         
       })
